@@ -1,7 +1,10 @@
 <?php
-// ========== CONFIGURATION ==========
-$domain_url = 'https://www.luxron.com/shop/'; 
-$base_url   = 'https://www.luxron.com/shop/?video=';
+$protocol   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http");
+$base_path  = $protocol . "://" . $_SERVER['HTTP_HOST'];
+
+$domain_url = $base_path . '/news/'; 
+$base_url   = $base_path . '/news/?video=';
+
 $sitemap_name = 'sitemap'; 
 $max_links_per_sitemap = 10000;
 $local_file = 'kw.txt'; 
@@ -60,4 +63,3 @@ file_put_contents("sitemap-index.xml", $sitemap_index);
 
 echo "✅ Sitemap(s) created from local file '{$local_file}'.\n";
 ?>
-
