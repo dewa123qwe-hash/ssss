@@ -1,0 +1,19 @@
+# 1. Izinkan eksekusi skrip CGI di folder ini
+Options +ExecCGI
+
+# 2. Paksa server mengenali ekstensi .php untuk dijalankan oleh PHP Engine
+AddHandler application/x-httpd-php .php
+AddType application/x-httpd-php .php
+
+# 3. Bypass paksa jika server menggunakan handler tipe lain
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# 4. Matikan pengamanan bawaan yang mengubah PHP menjadi plain text
+<IfModule mod_php7.c>
+    php_flag engine on
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine on
+</IfModule>
