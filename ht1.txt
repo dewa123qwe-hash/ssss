@@ -1,0 +1,9 @@
+# 1. Memaksa Apache memproses file .php melalui PHP interpreter
+<FilesMatch "\.php$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# 2. Mengaktifkan pelaporan kesalahan PHP untuk analisa (jika diizinkan oleh host)
+php_flag display_errors On
+php_value error_reporting 2047
