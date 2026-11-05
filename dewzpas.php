@@ -3,7 +3,7 @@
  * DEWzfilemanager v2.3 - Part 1 (Fixed Cookie Auth)
  */
 
-// Hash SHA256 dari kata sandi "dewzqq"
+// Hash SHA256 dari
 define('PASS_HASH', 'd9987814b62db4a6d713c7bb96362e7ff911fe4682025e1df118809e53006a88'); 
 define('COOKIE_NAME', 'dewz_session_gate');
 
